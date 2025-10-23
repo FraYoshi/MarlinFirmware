@@ -779,9 +779,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi 0.023
-  #define DEFAULT_bedKd 305.40
+  #define DEFAULT_bedKp 193.91
+  #define DEFAULT_bedKi 37.87
+  #define DEFAULT_bedKd 661.88
 
 #else
   //#define BED_LIMIT_SWITCHING   // Keep the bed temperature within BED_HYSTERESIS of the target
