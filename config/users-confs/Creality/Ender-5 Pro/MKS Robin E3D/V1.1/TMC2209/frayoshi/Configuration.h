@@ -687,13 +687,20 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
+  /*   #define DEFAULT_Kp_LIST {  22.20,  22.20 } */ // basic from MKS
+  /*   #define DEFAULT_Ki_LIST {   1.08,   1.08 } */ // basic from MKS
+  /*   #define DEFAULT_Kd_LIST { 114.00, 114.00 } */ // basic from MKS
+  /* #else */
+  /*   #define DEFAULT_Kp  22.20 */ // basic from MKS
+  /*   #define DEFAULT_Ki   1.08 */ // basic from MKS
+  /*   #define DEFAULT_Kd 114.00 */ // basic from MKS
+    #define DEFAULT_Kp_LIST {  23.04,  23.04 } // calculated
+    #define DEFAULT_Ki_LIST {   1.42,   1.42 } // calculated
+    #define DEFAULT_Kd_LIST {  93.53,  93.53 } // calculated
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  23.04 // calculated
+    #define DEFAULT_Ki   1.42 // calculated
+    #define DEFAULT_Kd  93.53 // calculated
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1199,7 +1206,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 79.75, 804, 96 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.60, 79.68, 804, 96 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
