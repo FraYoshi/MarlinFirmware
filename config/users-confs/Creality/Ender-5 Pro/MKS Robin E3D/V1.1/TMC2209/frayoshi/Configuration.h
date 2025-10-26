@@ -694,13 +694,13 @@
   /*   #define DEFAULT_Kp  22.20 */ // basic from MKS
   /*   #define DEFAULT_Ki   1.08 */ // basic from MKS
   /*   #define DEFAULT_Kd 114.00 */ // basic from MKS
-    #define DEFAULT_Kp_LIST {  23.04,  23.04 } // calculated
-    #define DEFAULT_Ki_LIST {   1.42,   1.42 } // calculated
-    #define DEFAULT_Kd_LIST {  93.53,  93.53 } // calculated
+    #define DEFAULT_Kp_LIST {  23.22,  23.22 } // calculated
+    #define DEFAULT_Ki_LIST {   1.59,   1.59 } // calculated
+    #define DEFAULT_Kd_LIST {  84.53,  84.53 } // calculated
   #else
-    #define DEFAULT_Kp  23.04 // calculated
-    #define DEFAULT_Ki   1.42 // calculated
-    #define DEFAULT_Kd  93.53 // calculated
+    #define DEFAULT_Kp  23.22 // calculated
+    #define DEFAULT_Ki   1.59 // calculated
+    #define DEFAULT_Kd  84.53 // calculated
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1206,7 +1206,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.60, 79.68, 804, 96 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.00, 80.00, 800, 93 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
