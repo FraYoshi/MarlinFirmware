@@ -687,13 +687,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  23.04,  23.04 }
-    #define DEFAULT_Ki_LIST {   1.42,   1.42 }
-    #define DEFAULT_Kd_LIST {  93.53,  93.53 }
+    #define DEFAULT_Kp_LIST {  23.22,  23.22 }
+    #define DEFAULT_Ki_LIST {   1.59,   1.59 }
+    #define DEFAULT_Kd_LIST {  84.53,  84.53 }
   #else
-    #define DEFAULT_Kp  23.04
-    #define DEFAULT_Ki   1.42
-    #define DEFAULT_Kd  93.53
+    #define DEFAULT_Kp  23.22
+    #define DEFAULT_Ki   1.59
+    #define DEFAULT_Kd  84.53
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
