@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -686,13 +686,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  21.00,  21.00 }
-    #define DEFAULT_Ki_LIST {   1.25,   1.25 }
-    #define DEFAULT_Kd_LIST {  86.00,  86.00 }
+    #define DEFAULT_KP_LIST {  21.00,  21.00 }
+    #define DEFAULT_KI_LIST {   1.25,   1.25 }
+    #define DEFAULT_KD_LIST {  86.00,  86.00 }
   #else
-    #define DEFAULT_Kp  21.00
-    #define DEFAULT_Ki   1.25
-    #define DEFAULT_Kd  86.00
+    #define DEFAULT_KP  21.00
+    #define DEFAULT_KI   1.25
+    #define DEFAULT_KD  86.00
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -779,9 +779,9 @@
 
   // ANET E16
   // original Bed  4mm glass plate (PID-Autotune: M303 E-1 S60 C5):
-  #define DEFAULT_bedKp 295.00
-  #define DEFAULT_bedKi 35.65
-  #define DEFAULT_bedKd 610.21
+  #define DEFAULT_BED_KP 295.00
+  #define DEFAULT_BED_KI 35.65
+  #define DEFAULT_BED_KD 610.21
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -825,9 +825,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

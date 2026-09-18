@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -684,19 +684,19 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {   6.0,   6.0 }
-    #define DEFAULT_Ki_LIST {   0.3,   0.3 }
-    #define DEFAULT_Kd_LIST { 125.0, 125.0 }
+    #define DEFAULT_KP_LIST {   6.0,   6.0 }
+    #define DEFAULT_KI_LIST {   0.3,   0.3 }
+    #define DEFAULT_KD_LIST { 125.0, 125.0 }
   #else
     // Buda 2.0 on 24V
-    #define DEFAULT_Kp   6.0
-    #define DEFAULT_Ki   0.3
-    #define DEFAULT_Kd 125.0
+    #define DEFAULT_KP   6.0
+    #define DEFAULT_KI   0.3
+    #define DEFAULT_KD 125.0
 
     // Buda 2.0 on 12V
-    //#define DEFAULT_Kp  22.20
-    //#define DEFAULT_Ki   1.01
-    //#define DEFAULT_Kd 114.00
+    //#define DEFAULT_KP  22.20
+    //#define DEFAULT_KI   1.01
+    //#define DEFAULT_KD 114.00
   #endif
 #else
   #define BANG_MAX  70    // Limit hotend current while in bang-bang mode; 255=full current
@@ -782,15 +782,15 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // 24V 360W silicone heater from NPH on 3mm borosilicate (TAZ 2.2+)
-  #define DEFAULT_bedKp 20
-  #define DEFAULT_bedKi 5
-  #define DEFAULT_bedKd 275
+  #define DEFAULT_BED_KP 20
+  #define DEFAULT_BED_KI 5
+  #define DEFAULT_BED_KD 275
 
   // 12v 400W silicone heater from QUDB into 3mm borosilicate (TAZ 1.0+)
   // from pidautotune
-  //#define DEFAULT_bedKp 650
-  //#define DEFAULT_bedKi 60
-  //#define DEFAULT_bedKd 1800
+  //#define DEFAULT_BED_KP 650
+  //#define DEFAULT_BED_KI 60
+  //#define DEFAULT_BED_KD 1800
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -834,9 +834,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

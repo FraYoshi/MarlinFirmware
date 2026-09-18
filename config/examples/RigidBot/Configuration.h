@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -686,24 +686,24 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  16.17,  16.17 }
-    #define DEFAULT_Ki_LIST {   0.85,   0.85 }
-    #define DEFAULT_Kd_LIST {  76.55,  76.55 }
+    #define DEFAULT_KP_LIST {  16.17,  16.17 }
+    #define DEFAULT_KI_LIST {   0.85,   0.85 }
+    #define DEFAULT_KD_LIST {  76.55,  76.55 }
   #else
     // Rigidbot hotend
-    #define DEFAULT_Kp  16.17
-    #define DEFAULT_Ki   0.85
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_KP  16.17
+    #define DEFAULT_KI   0.85
+    #define DEFAULT_KD  76.55
 
     // Base DGlass3D/E3Dv6 hotend
-    //#define DEFAULT_Kp 10
-    //#define DEFAULT_Ki 0.85
-    //#define DEFAULT_Kd 245
+    //#define DEFAULT_KP 10
+    //#define DEFAULT_KI 0.85
+    //#define DEFAULT_KD 245
 
     // E3D w/ rigidbot cartridge
-    //#define DEFAULT_Kp 16.30
-    //#define DEFAULT_Ki 0.95
-    //#define DEFAULT_Kd 69.69
+    //#define DEFAULT_KP 16.30
+    //#define DEFAULT_KI 0.95
+    //#define DEFAULT_KD 69.69
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -789,9 +789,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // RigidBot, from pid autotune
-  #define DEFAULT_bedKp 355
-  #define DEFAULT_bedKi 66.5
-  #define DEFAULT_bedKd 480
+  #define DEFAULT_BED_KP 355
+  #define DEFAULT_BED_KI 66.5
+  #define DEFAULT_BED_KD 480
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -835,9 +835,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

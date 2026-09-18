@@ -40,7 +40,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -695,13 +695,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  20.24,  20.24 }
-    #define DEFAULT_Ki_LIST {   1.29,   1.29 }
-    #define DEFAULT_Kd_LIST {  79.35,  79.35 }
+    #define DEFAULT_KP_LIST {  20.24,  20.24 }
+    #define DEFAULT_KI_LIST {   1.29,   1.29 }
+    #define DEFAULT_KD_LIST {  79.35,  79.35 }
   #else
-    #define DEFAULT_Kp  20.24
-    #define DEFAULT_Ki   1.29
-    #define DEFAULT_Kd  79.35
+    #define DEFAULT_KP  20.24
+    #define DEFAULT_KI   1.29
+    #define DEFAULT_KD  79.35
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -787,9 +787,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Anycubic i3 Mega Ultrabase (0.9Ω @ 22°C)
-  #define DEFAULT_bedKp 251.78
-  #define DEFAULT_bedKi 49.57
-  #define DEFAULT_bedKd 319.73
+  #define DEFAULT_BED_KP 251.78
+  #define DEFAULT_BED_KI 49.57
+  #define DEFAULT_BED_KD 319.73
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -833,9 +833,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

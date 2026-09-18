@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 /**
  * Sample configuration file for TinyBoy2 L10/L16
@@ -711,20 +711,20 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  26.15,  26.15 }
-    #define DEFAULT_Ki_LIST {   2.71,   2.71 }
-    #define DEFAULT_Kd_LIST {  63.02,  63.02 }
+    #define DEFAULT_KP_LIST {  26.15,  26.15 }
+    #define DEFAULT_KI_LIST {   2.71,   2.71 }
+    #define DEFAULT_KD_LIST {  63.02,  63.02 }
   #else
     // TinyBoy2 Extruder - calculated with PID Autotune and tested
     // "M303 E0 C8 S200"
-    //#define DEFAULT_Kp  25.63
-    //#define DEFAULT_Ki   2.66
-    //#define DEFAULT_Kd  61.73
+    //#define DEFAULT_KP  25.63
+    //#define DEFAULT_KI   2.66
+    //#define DEFAULT_KD  61.73
 
     // TinyBoy2 Extruder - same, but with fan @ 25% duty
-    #define DEFAULT_Kp  26.15
-    #define DEFAULT_Ki   2.71
-    #define DEFAULT_Kd  63.02
+    #define DEFAULT_KP  26.15
+    #define DEFAULT_KI   2.71
+    #define DEFAULT_KD  63.02
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -811,15 +811,15 @@
 
   // TinyBoy2 heatbed - calculated with PID Autotune and tested
   // "M303 E-1 C8 S75"
-  //#define DEFAULT_bedKp 421.80
-  //#define DEFAULT_bedKi 82.51
-  //#define DEFAULT_bedKd 539.06
+  //#define DEFAULT_BED_KP 421.80
+  //#define DEFAULT_BED_KI 82.51
+  //#define DEFAULT_BED_KD 539.06
 
   // TinyBoy2 heatbed - same, but with fan @ 25% duty
   // "M303 E-1 C8 S75"
-  #define DEFAULT_bedKp 267.54
-  #define DEFAULT_bedKi 52.34
-  #define DEFAULT_bedKd 341.92
+  #define DEFAULT_BED_KP 267.54
+  #define DEFAULT_BED_KI 52.34
+  #define DEFAULT_BED_KD 341.92
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -863,9 +863,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

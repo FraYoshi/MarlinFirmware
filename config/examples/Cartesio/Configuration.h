@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -685,24 +685,24 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  18.0,  18.0 }
-    #define DEFAULT_Ki_LIST {   1.0,   1.0 }
-    #define DEFAULT_Kd_LIST { 100.0, 100.0 }
+    #define DEFAULT_KP_LIST {  18.0,  18.0 }
+    #define DEFAULT_KI_LIST {   1.0,   1.0 }
+    #define DEFAULT_KD_LIST { 100.0, 100.0 }
   #else
     // Cartesio extruderV6 40W Normal
-    #define DEFAULT_Kp  18.0
-    #define DEFAULT_Ki   1.0
-    #define DEFAULT_Kd 100.0
+    #define DEFAULT_KP  18.0
+    #define DEFAULT_KI   1.0
+    #define DEFAULT_KD 100.0
 
     // Cartesio extruderV6 40W Volcano
-    //#define DEFAULT_Kp  50.0
-    //#define DEFAULT_Ki   9.0
-    //#define DEFAULT_Kd  70.0
+    //#define DEFAULT_KP  50.0
+    //#define DEFAULT_KI   9.0
+    //#define DEFAULT_KD  70.0
 
     // Cartesio extruderV6 40W Cyclops
-    //#define DEFAULT_Kp  18.0
-    //#define DEFAULT_Ki   1.0
-    //#define DEFAULT_Kd 100.0
+    //#define DEFAULT_KP  18.0
+    //#define DEFAULT_KI   1.0
+    //#define DEFAULT_KD 100.0
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -788,14 +788,14 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // 24V 500W silicone heater on to 4mm glass CartesioW
-  #define DEFAULT_bedKp 390
-  #define DEFAULT_bedKi 70
-  #define DEFAULT_bedKd 546
+  #define DEFAULT_BED_KP 390
+  #define DEFAULT_BED_KI 70
+  #define DEFAULT_BED_KD 546
 
   // 24V 250W silicone heater on to 4mm glass CartesioM
-  //#define DEFAULT_bedKp 303
-  //#define DEFAULT_bedKi 42
-  //#define DEFAULT_bedKd 539
+  //#define DEFAULT_BED_KP 303
+  //#define DEFAULT_BED_KI 42
+  //#define DEFAULT_BED_KD 539
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -839,9 +839,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

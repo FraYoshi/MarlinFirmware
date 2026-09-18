@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -684,24 +684,24 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  35.92,  35.92 }
-    #define DEFAULT_Ki_LIST {   5.69,   5.69 }
-    #define DEFAULT_Kd_LIST {  56.64,  56.64 }
+    #define DEFAULT_KP_LIST {  35.92,  35.92 }
+    #define DEFAULT_KI_LIST {   5.69,   5.69 }
+    #define DEFAULT_KD_LIST {  56.64,  56.64 }
   #else
     // E3D V6 at 190C
-    //#define DEFAULT_Kp  38.87
-    //#define DEFAULT_Ki   4.61
-    //#define DEFAULT_Kd  82.00
+    //#define DEFAULT_KP  38.87
+    //#define DEFAULT_KI   4.61
+    //#define DEFAULT_KD  82.00
 
     // E3D at 200C
-    //#define DEFAULT_Kp  31.89
-    //#define DEFAULT_Ki   3.93
-    //#define DEFAULT_Kd  64.66
+    //#define DEFAULT_KP  31.89
+    //#define DEFAULT_KI   3.93
+    //#define DEFAULT_KD  64.66
 
     // E3D at 240C
-    #define DEFAULT_Kp  35.92
-    #define DEFAULT_Ki   5.69
-    #define DEFAULT_Kd  56.64
+    #define DEFAULT_KP  35.92
+    #define DEFAULT_KI   5.69
+    #define DEFAULT_KD  56.64
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -787,14 +787,14 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Artillery Sidewinder heated bed at 60C
-  //#define DEFAULT_bedKp 32.49
-  //#define DEFAULT_bedKi 5.29
-  //#define DEFAULT_bedKd 133.10
+  //#define DEFAULT_BED_KP 32.49
+  //#define DEFAULT_BED_KI 5.29
+  //#define DEFAULT_BED_KD 133.10
 
   // Artillery Sidewinder heated bed at 100C
-  #define DEFAULT_bedKp 41.68
-  #define DEFAULT_bedKi 6.88
-  #define DEFAULT_bedKd 168.43
+  #define DEFAULT_BED_KP 41.68
+  #define DEFAULT_BED_KI 6.88
+  #define DEFAULT_BED_KD 168.43
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -838,9 +838,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

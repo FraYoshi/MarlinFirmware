@@ -40,7 +40,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -688,13 +688,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  23.34,  23.34 }
-    #define DEFAULT_Ki_LIST {   1.85,   1.85 }
-    #define DEFAULT_Kd_LIST {  73.55,  73.55 }
+    #define DEFAULT_KP_LIST {  23.34,  23.34 }
+    #define DEFAULT_KI_LIST {   1.85,   1.85 }
+    #define DEFAULT_KD_LIST {  73.55,  73.55 }
   #else
-    #define DEFAULT_Kp  23.34
-    #define DEFAULT_Ki   1.85
-    #define DEFAULT_Kd  73.55
+    #define DEFAULT_KP  23.34
+    #define DEFAULT_KI   1.85
+    #define DEFAULT_KD  73.55
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -780,9 +780,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // BIQU B1
-  #define DEFAULT_bedKp 100.65
-  #define DEFAULT_bedKi 14.82
-  #define DEFAULT_bedKd 455.69
+  #define DEFAULT_BED_KP 100.65
+  #define DEFAULT_BED_KI 14.82
+  #define DEFAULT_BED_KD 455.69
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -826,9 +826,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

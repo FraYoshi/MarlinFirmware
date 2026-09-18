@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -683,14 +683,14 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    //#define DEFAULT_Kp_LIST {  26.19,  26.19 }
-    //#define DEFAULT_Ki_LIST {   2.41,   2.41 }
-    //#define DEFAULT_Kd_LIST {  71.28,  71.28 }
+    //#define DEFAULT_KP_LIST {  26.19,  26.19 }
+    //#define DEFAULT_KI_LIST {   2.41,   2.41 }
+    //#define DEFAULT_KD_LIST {  71.28,  71.28 }
   #else
      // TronxyX5S-2e Hotend Tested
-    #define DEFAULT_Kp 41.9
-    #define DEFAULT_Ki 8.18
-    #define DEFAULT_Kd 53.8
+    #define DEFAULT_KP 41.9
+    #define DEFAULT_KI 8.18
+    #define DEFAULT_KD 53.8
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -779,9 +779,9 @@
   // The OEM stock model uses a clone MK3a 300 @ 12V with no insulation and can reach a maximum 70C at 25C ambient.
   // Tested with commands: "M304 P100 I20 D500" and "M303 C10 E-1 S65"
     //12V Heated Bed (330x330) Tronxy
-  #define DEFAULT_bedKp 344.2
-  #define DEFAULT_bedKi 57.25
-  #define DEFAULT_bedKd 379.5
+  #define DEFAULT_BED_KP 344.2
+  #define DEFAULT_BED_KI 57.25
+  #define DEFAULT_BED_KD 379.5
 
 #else
   //#define BED_LIMIT_SWITCHING   // Keep the bed temperature within BED_HYSTERESIS of the target
@@ -824,9 +824,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.

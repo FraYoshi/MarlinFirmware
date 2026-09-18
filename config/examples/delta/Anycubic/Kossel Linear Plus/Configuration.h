@@ -52,7 +52,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010205
+#define CONFIGURATION_H_VERSION 02010206
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -703,13 +703,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  22.36,  22.36 }
-    #define DEFAULT_Ki_LIST {   1.63,   1.63 }
-    #define DEFAULT_Kd_LIST {  76.48,  76.48 }
+    #define DEFAULT_KP_LIST {  22.36,  22.36 }
+    #define DEFAULT_KI_LIST {   1.63,   1.63 }
+    #define DEFAULT_KD_LIST {  76.48,  76.48 }
   #else
-    #define DEFAULT_Kp  22.36
-    #define DEFAULT_Ki   1.63
-    #define DEFAULT_Kd  76.48
+    #define DEFAULT_KP  22.36
+    #define DEFAULT_KI   1.63
+    #define DEFAULT_KD  76.48
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -797,14 +797,14 @@
   // this is for the aluminium bed with a BuildTak-like sticker on it
   // from pid autotune. "M303 E-1 C8 S60" to run autotune on the bed at 60 degreesC for 8 cycles
   #if ANYCUBIC_KOSSEL_ENABLE_BED == 1
-    #define DEFAULT_bedKp 374.03
-    #define DEFAULT_bedKi 72.47
-    #define DEFAULT_bedKd 482.59
+    #define DEFAULT_BED_KP 374.03
+    #define DEFAULT_BED_KI 72.47
+    #define DEFAULT_BED_KD 482.59
   #elif ANYCUBIC_KOSSEL_ENABLE_BED == 2
     // TODO get real PID values for Ultrabase Bed
-    #define DEFAULT_bedKp 374.03
-    #define DEFAULT_bedKi 72.47
-    #define DEFAULT_bedKd 482.59
+    #define DEFAULT_BED_KP 374.03
+    #define DEFAULT_BED_KI 72.47
+    #define DEFAULT_BED_KD 482.59
   #endif
 
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
@@ -851,9 +851,9 @@
   // Lasko "MyHeat Personal Heater" (200w) modified with a Fotek SSR-10DA to control only the heating element
   // and placed inside the small Creality printer enclosure tent.
   //
-  #define DEFAULT_chamberKp  37.04
-  #define DEFAULT_chamberKi   1.40
-  #define DEFAULT_chamberKd 655.17
+  #define DEFAULT_CHAMBER_KP  37.04
+  #define DEFAULT_CHAMBER_KI   1.40
+  #define DEFAULT_CHAMBER_KD 655.17
   // M309 P37.04 I1.04 D655.17
 
   // FIND YOUR OWN: "M303 E-2 C8 S50" to run autotune on the chamber at 50 degreesC for 8 cycles.
